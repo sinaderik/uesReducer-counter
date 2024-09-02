@@ -1,0 +1,42 @@
+.container {
+    width: 70%;
+    height: 300px;
+    border: 3px solid cadetblue;
+    background-color: antiquewhite;
+    border-radius: 7px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.counter__wrapper h2,
+.text__wrapper h2 {
+    text-align: center;
+}
+
+.counter__btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.counter__btn-wrapper button {
+    border: none;
+    outline: none;
+    background-color: cadetblue;
+    border-radius: 6px;
+    padding: 10px 10px;
+    font-size: 0.9rem;
+}
+
+.text__wrapper input {
+    font-size: 1rem;
+    padding: 7px;
+    border-radius: 5px;
+}
+.text__wrapper input:focus{
+    outline: 1px solid cadetblue;
+    border-radius: 5px;
+}

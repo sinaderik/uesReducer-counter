@@ -1,4 +1,7 @@
 import React, { useReducer } from 'react'
+import reducer from './reducer'
+import './styles/app.css'
+
 
 function App() {
 
@@ -7,23 +10,27 @@ function App() {
     error: false
   }
 
-  function reducer(state, action) {
-    switch (action.type) {
-      case 'increase':
-        return { ...state, count: state.count + 1 }
-      case 'decrease':
-        return { ...state, count: state.count - 1 }
-      default:
-        text = "Looking forward to the Weekend";
-    }
+  const ACTION = {
+    INCREMENT: "increase",
+    DECREMENT: "decrease",
   }
+
+
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <div>
-      <h3>Counter: {state.count}</h3>
-      <button onClick={() => dispatch({ type: 'increase' })}>Increase</button><br /><br />
-      <button onClick={()=>dispatch({ type: 'decrease' })}>Decrease</button>
+    <div className='container'>
+      <div className='counter__wrapper'>
+        <h2>Counter: {state.count}</h2>
+        <div className='counter__btn-wrapper'>
+          <button onClick={() => dispatch({ type: 'increase' })}>Increase</button>
+          <button onClick={() => dispatch({ type: 'decrease' })}>Decrease</button>
+        </div>
+      </div>
+      <div className='text__wrapper'>
+        <input type="text" />
+        <h2></h2>
+      </div>
     </div>
   )
 }
