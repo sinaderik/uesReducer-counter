@@ -11,8 +11,12 @@
 }
 
 .counter__wrapper h2,
-.text__wrapper h2 {
+.text__wrapper h2{
     text-align: center;
+}
+
+.error__text {
+    color: red;
 }
 
 .counter__btn-wrapper {
@@ -36,7 +40,8 @@
     padding: 7px;
     border-radius: 5px;
 }
-.text__wrapper input:focus{
+
+.text__wrapper input:focus {
     outline: 1px solid cadetblue;
     border-radius: 5px;
 }
